@@ -212,7 +212,6 @@ nav{
 .projectNumber h2{
     color: rgb(80, 80, 255);
     font-size: 35px;
-
 }
 
 .projectNumber p,
@@ -318,14 +317,14 @@ main{
 main .projectCards{
     display: flex;
     flex-wrap: wrap !important;
-    justify-content: center;
-    align-items: center;
+    justify-content: center !important;
+    align-items: center !important; 
     gap: 3%;
     width: 80%;
     margin: 75px auto;
     box-sizing: border-box;
-    padding: 20px;
-    height: 900px;
+    padding: 20px !important;
+    height: fit-content !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
 }
@@ -336,8 +335,8 @@ main .projectCards{
     justify-content: center;
     width: 22%;
     height: 47%;
-    box-sizing: border-box;
-    padding: 10px;
+    box-sizing: border-box !important;
+    padding: 10px !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     transition: 0.6s;
@@ -798,21 +797,22 @@ footer .quickLinks,
     }
 
     main .projectCards{
-        height: fit-content;
+        height: fit-content !important;
         max-width: 400px;
         display: flex;
         flex-direction: column !important;
-        justify-content: center;
-        align-items: center;
+        justify-content: center !important;
+        align-items: center !important;
         gap: 60px;
         padding: 0;
     }
 
     .projectCards .card {
-        max-height: 370px;
+        max-height: fit-content !important;
         min-height: 300px;
-        margin: 0;
+        /* margin: 0; */
         gap: 20px;
+        transform: translateX(-12px);
         min-width: 320px !important;
         max-width: 380px !important;;
     }

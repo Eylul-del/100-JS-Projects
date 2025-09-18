@@ -58,11 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //for projects
 // document.addEventListener('DOMContentLoaded', () => {
-//   const projectBtns = document.querySelectorAll('.project[data-project]');
+//   let projectBtns = document.querySelectorAll('.project[data-project]');
 
 //   projectBtns.forEach(btn => {
 //     btn.addEventListener('click', () => {
-//       const projectNum = btn.getAttribute('data-project');
+//       let projectNum = btn.getAttribute('data-project');
 //       // Always load from /projects/ folder
 //       window.location.href = `projects/project${projectNum}.html`;
 //     });
@@ -74,22 +74,22 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', () => {
   console.log('main.js loaded');
 
-  const explanationBtns = Array.from(document.querySelectorAll('.project[data-project]'));
-  const similarBtns    = Array.from(document.querySelectorAll('.similarProject[data-similar]'));
+  let explanationBtns = Array.from(document.querySelectorAll('.project[data-project]'));
+  let similarBtns    = Array.from(document.querySelectorAll('.similarProject[data-similar]'));
 
   console.log('explanationBtns found:', explanationBtns.length);
   console.log('similarBtns found:', similarBtns.length);
 
   // Try to detect repo base for GitHub Pages (e.g. /your-repo-name/)
   function detectRepoBase() {
-    const parts = location.pathname.split('/').filter(Boolean);
+    let parts = location.pathname.split('/').filter(Boolean);
     if (location.hostname.endsWith('github.io') && parts.length > 0) {
       // assume first path segment is the repo name (unless it's a filename)
       if (!parts[0].includes('.')) return `/${parts[0]}/`;
     }
     return '/';
   }
-  const repoBase = detectRepoBase();
+  let repoBase = detectRepoBase();
   console.log('detected repoBase:', repoBase);
 
   function buildCandidates(n) {
@@ -115,10 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
       return null;
     }
 
-    for (const c of candidates) {
-      const resolved = new URL(c, location.href).href;
+    for (let c of candidates) {
+      let resolved = new URL(c, location.href).href;
       try {
-        const res = await fetch(resolved, { method: 'HEAD' });
+        let res = await fetch(resolved, { method: 'HEAD' });
         console.log('HEAD', resolved, res.status);
         if (res.ok) return resolved;
       } catch (err) {
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     buttons.forEach(btn => {
       btn.addEventListener('click', async (e) => {
         e.preventDefault();
-        const num = btn.getAttribute(attributeName);
+        let num = btn.getAttribute(attributeName);
         console.log('clicked', attributeName, num);
 
         if (!num) {
@@ -141,16 +141,16 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
 
-        const candidates = buildCandidates(num);
+        let candidates = buildCandidates(num);
         console.log('candidate URLs (resolved):', candidates.map(c => new URL(c, location.href).href));
 
-        const good = await findExistingUrl(candidates);
+        let good = await findExistingUrl(candidates);
         if (good) {
           console.log('navigating to existing URL:', good);
           window.location.href = good;
         } else {
           // fallback: navigate to the first candidate (resolved)
-          const fallback = new URL(candidates[0], location.href).href;
+          let fallback = new URL(candidates[0], location.href).href;
           console.warn('No existing candidate found; navigating to fallback:', fallback);
           window.location.href = fallback;
         }
