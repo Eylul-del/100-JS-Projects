@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background-color: white;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  margin: 100px auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.dice-display {
+  font-size: 80px;
+  margin: 20px 0;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: #4da6c0;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #398fa3;
+}
+
+.result {
+  background-color: #f2f2f2;
+  margin: 20px auto;
+  padding: 12px 20px;
+  border-radius: 6px;
+  width: 200px;
+  font-size: 18px;
+  text-align: center;
+}

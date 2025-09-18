@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.testimonial-card {
+  background: #6a4fcf;
+  color: white;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+}
+
+.user-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+}
+
+.message {
+  margin-top: 50px;
+  font-size: 18px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.author {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 14px;
+}

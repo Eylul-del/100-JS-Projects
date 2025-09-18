@@ -1,0 +1,285 @@
+:root{
+    --mainGray: rgb(54, 54, 54);
+    --spanGray: rgb(87, 86, 86);
+}
+
+*{
+    /* outline: 1px solid limegreen; */
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif !important;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(224, 224, 224, 0.274);
+}
+
+a{
+    text-decoration: none;
+}
+
+header .headerContent{
+    background: linear-gradient(to right, rgba(220, 220, 255, 0.532) , rgba(255, 216, 252, 0.416));
+    height: 400px !important;
+}
+
+.headerContent .mainTitle p{
+    width: 60%;
+}
+
+main{
+    height: 180vh;
+}
+
+.ourMission{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.ourMission .description{
+    width: 35%;
+    text-align: left;
+    line-height: 20px;
+    font-size: 22px;
+}
+
+.description h2{
+    font-size: 30px;
+}
+
+.ourAchievements{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+} 
+
+.ourAchievements div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    height: 89px;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.ourAchievements div p{
+    font-size: 18px;
+    margin: 0;
+    color: var(--spanGray);
+}
+
+.ourAchievements div span{
+    font-size: 35px;
+    margin: 0;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+
+.ourAchievements div:first-child span{
+    color: rgb(21, 93, 251);
+}
+
+.ourAchievements div:nth-child(2) span{
+    color: rgb(0, 201, 80);
+}
+
+
+.ourAchievements div:nth-child(3) span{
+    color: rgb(152, 16, 250);
+}
+
+
+.ourAchievements div:last-child span{
+    color: rgb(245, 73, 0);
+}
+
+
+.ourPlatform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    height: 850px;
+}
+
+.ourPlatform .description p{
+    width: 650px;
+}
+
+.features{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.features .feature{
+    width: 21%;
+    height: 250px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.feature .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.feature .icon i{
+    width: inherit;
+    height: inherit;
+    font-size: 28px;
+    color: white;
+}
+
+.feature:first-child .icon{
+    background-color: rgb(21, 93, 251);
+}
+
+
+.feature:nth-child(2) .icon{
+    background-color: rgb(0, 201, 80);
+}
+
+
+.feature:last-child .icon{
+    background-color: rgb(152, 16, 250);
+}
+
+.feature .sub p{
+    color: var(--spanGray);
+}
+
+.readyToStart{
+    width: 60%;
+    height: 300px;
+    text-align: center !important;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.readyToStart h2{
+    font-size: 30px;
+}
+
+.readyToStart .sub{
+    width: 700px;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0 auto;
+    color: var(--spanGray);
+    font-size: 20px;
+}
+
+.readyToStart .projectBtn{
+    width: 200px;
+    padding: 20px 10px;
+    margin: 40px auto 0;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    transition: 0.3s;
+    background: linear-gradient(to right, rgb(80, 80, 255), rgba(74, 34, 175, 0.822), rgba(147, 45, 175, 0.625));
+}
+
+.readyToStart .projectBtn:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+@media (max-width:420px) {
+
+    main{
+        height: 350vh;
+    }
+    .ourMission{
+        flex-wrap: wrap;
+        gap: 0px;
+        height: 120vh;
+        margin-bottom: 40px;
+    }
+
+    .ourMission div{
+        width: 375px !important;
+    }
+    .ourAchievements{
+        height: 250px;
+        gap: 0;
+        flex-wrap: wrap !important;
+    }
+
+    .ourAchievements div{
+        width: 40% !important;
+    }
+
+    .ourPlatform .description h2{
+        font-size: 25px;
+    }
+    .ourPlatform .description p{
+        width: 400px;
+        line-height: 21px;
+        font-size: 16px !important;
+    }
+    
+    .features{
+        width: 400px;
+        flex-wrap: wrap;
+    }
+
+    .feature{
+        min-width: 350px !important; 
+        max-width: 400px;
+    }
+
+    .readyToStart{
+        min-width: 350px !important; 
+        max-width: 400px;
+    }
+
+    .readyToStart h2{
+        font-size: 22px;
+    }
+
+    .readyToStart .sub{
+        min-width: 300px;
+        max-width: 300px;
+        font-size: 15px;
+        transform: translateX(-15px);
+    }
+
+    .readyToStart .projectBtn{
+        width: 250px;
+        font-size: 18px;
+        padding: 15px 5px;
+    }
+}
