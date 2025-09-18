@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let cookiesBtns = document.querySelectorAll(".cookiesBtn");
     let privacyBtns = document.querySelectorAll(".privacybtn");
     let termsBtns = document.querySelectorAll(".termsBtn");
-    // let similarProjectsBtn = document.querySelectorAll(".similarProjectCard");
 
   
     homeBtns.forEach(btn => {
@@ -57,20 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //for projects
-// document.addEventListener('DOMContentLoaded', () => {
-//   let projectBtns = document.querySelectorAll('.project[data-project]');
-
-//   projectBtns.forEach(btn => {
-//     btn.addEventListener('click', () => {
-//       let projectNum = btn.getAttribute('data-project');
-//       // Always load from /projects/ folder
-//       window.location.href = `projects/project${projectNum}.html`;
-//     });
-//   });
-// });
-
-// console.log("hwllo");
-
 document.addEventListener('DOMContentLoaded', () => {
   console.log('main.js loaded');
 
@@ -163,27 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   let projectBtns = document.querySelectorAll('.project[data-project]');
-//   projectBtns.forEach(btn => {
-//     btn.addEventListener('click', () => {
-//       let projectNum = btn.getAttribute('data-project');
-//       window.location.href = `../projects/project${projectNum}.html`;
-//     });
-//   });
-// });
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   let similarProjectsBtn = document.querySelectorAll('.project[data-project]');
-//   similarProjectsBtn.forEach(btn => {
-//     btn.addEventListener('click', () => {
-//       let projectNum = btn.getAttribute('data-project');
-//       window.location.href = `../projects/project${projectNum}.html`;
-//     });
-//   });
-// });
 
 
 
