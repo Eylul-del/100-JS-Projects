@@ -834,9 +834,17 @@ footer .quickLinks,
         max-width: 98% !important;
     }
 
+    .projePhoto {
+        height: fit-content !important;
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
     .projectCards .card .projePhoto img{
         width: 90%;
-        height: 100%;
+        height: 150px !important;
+        margin: 0 !important;
     } 
     
     .card .cardContent a{
