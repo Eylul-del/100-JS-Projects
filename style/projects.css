@@ -389,6 +389,11 @@
         margin: 0 auto;
     }
 
-    /* .projectsCards .card .projePhoto{
-    } */
+    .projectsCards .card .projePhoto{
+        margin:  0 auto;
+    }
+
+    .projectsCards .card .projePhoto img{
+        margin: 0 !important;
+    }
 }
