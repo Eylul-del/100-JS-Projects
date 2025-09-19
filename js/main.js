@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let homeBtns = document.querySelectorAll(".homeBtn");
+
+  let homeBtns = document.querySelectorAll(".homeBtn");
     let aboutBtns = document.querySelectorAll(".aboutBtn");
     let projectBtns = document.querySelectorAll(".projectBtn");
     let contctBtns = document.querySelectorAll(".contctBtn");
@@ -7,51 +8,30 @@ document.addEventListener('DOMContentLoaded', function () {
     let privacyBtns = document.querySelectorAll(".privacybtn");
     let termsBtns = document.querySelectorAll(".termsBtn");
 
-  
-    homeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      window.location.href = './index.html';
-    });
-  });
+  // detect if we are inside /projects/
+  const isInProjects = window.location.pathname.includes('/projects/');
+  const prefix = isInProjects ? '../' : './';
 
-  aboutBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      window.location.href = './about.html';
-    });
-  });
+  // map variables → file paths
+  const links = [
+    { btns: homeBtns, file: 'index.html' },
+    { btns: aboutBtns, file: 'about.html' },
+    { btns: projectBtns, file: 'allProjects.html' },
+    { btns: contctBtns, file: 'contact.html' },
+    { btns: cookiesBtns, file: 'cookies.html' },
+    { btns: privacyBtns, file: 'privacy.html' },
+    { btns: termsBtns, file: 'terms.html' }
+  ];
 
-  projectBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      window.location.href = './allProjects.html';
-    });
-  });
-
-  contctBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      window.location.href = './contact.html';
-    });
-  });
-
-  cookiesBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      window.location.href = './cookies.html';
-    });
-  });
-
-  privacyBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      window.location.href = './privacy.html';
-    });
-  });
-
-  termsBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      window.location.href = './terms.html';
+  // attach listeners
+  links.forEach(({ btns, file }) => {
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        window.location.href = prefix + file;
+      });
     });
   });
 });
-
-
 
 
 
