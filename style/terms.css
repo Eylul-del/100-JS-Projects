@@ -41,6 +41,36 @@
     display: block;
 }
 
+/*dark mode*/
+
+/* 🌙 Dark Theme */
+body.darkTheme {
+  background-color: #121212; /* global dark background */
+  color: #e4e4e4;
+}
+
+body.darkTheme .informations {
+  background-color: #1e1e1e; /* dark card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+body.darkTheme .lastUpdate p {
+  color: #b0b0b0; /* softer gray */
+}
+
+body.darkTheme .lastUpdate p span {
+  color: #f5f5f5; /* light main text */
+}
+
+body.darkTheme .informations div p {
+  color: #c0c0c0; /* neutral gray */
+}
+
+body.darkTheme .informations .contactUs span {
+  color: #6faaff; /* accent blue */
+}
+
+
 @media (max-width:420px) {
     .informations{
         width: 95%;

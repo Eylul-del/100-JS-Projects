@@ -56,6 +56,7 @@ nav{
     z-index: 434;
     width: 30%;
     padding: 10px;
+    transform: translateX(250px);
 }
 
 .links p{
@@ -88,6 +89,18 @@ nav{
 
 .links p:last-child:hover{
     color: white;
+}
+
+.theme{
+    padding: 1px 3px 4px;
+    border-radius: 10px;
+    background-color: rgba(106, 106, 106, 0.549);
+}
+
+.theme button{
+    font-size: 25px;
+    border: none;
+    background: transparent;
 }
 
 .headerContent{
@@ -319,7 +332,7 @@ main .projectCards{
     flex-wrap: wrap !important;
     justify-content: center !important;
     align-items: center !important; 
-    gap: 3%;
+    gap: 40px;
     width: 80%;
     margin: 75px auto;
     box-sizing: border-box;
@@ -692,6 +705,127 @@ footer .quickLinks,
 .rightLikns p:hover::before {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+
+/*dark mode*/
+.darkTheme {
+  --mainGray: rgb(230, 230, 230);   /* brighter text */
+  --spanGray: rgb(160, 160, 160);   /* secondary text */
+  --bgDark: rgb(18, 18, 18);        /* very dark background */
+  --cardDark: rgb(28, 28, 28);      /* card backgrounds */
+  --accentBlue: rgb(100, 150, 255); /* accent color */
+  --accentPurple: rgb(180, 120, 255);
+}
+
+/* GENERAL */
+body.darkTheme {
+  background-color: var(--bgDark);
+  color: var(--mainGray);
+}
+
+body.darkTheme a {
+  color: var(--accentBlue);
+}
+
+/* NAVBAR */
+body.darkTheme nav {
+  background-color: rgb(24, 24, 24);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+body.darkTheme .logo h2 {
+  color: var(--spanGray);
+}
+
+body.darkTheme .logo span {
+  background: linear-gradient(
+    to right,
+    var(--accentBlue),
+    var(--accentPurple)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.darkTheme nav .links p{
+    color: white;
+}
+
+body.darkTheme nav .theme{
+    padding: 1px 3px;
+    border-radius: 10px;
+    background-color: rgb(255, 254, 188);
+}
+
+/* HEADER */
+body.darkTheme .headerContent {
+  background-color: rgb(25, 25, 25);
+}
+
+body.darkTheme .mainTitle {
+  color: var(--accentBlue);
+}
+
+body.darkTheme .mainTitle p {
+  color: var(--spanGray);
+}
+
+body.darkTheme .mainTitle p span {
+  color: var(--accentBlue);
+}
+
+body.darkTheme .sub1 {
+    background-color: rgba(77, 77, 77, 0.382);
+}
+
+body.darkTheme .achievements div{
+    background-color: rgba(137, 137, 137, 0.068);
+}
+
+/* CARDS */
+body.darkTheme .card {
+  background-color: var(--cardDark);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+body.darkTheme .card:hover {
+  box-shadow: 0 6px 14px rgba(0,0,0,0.8);
+}
+body.darkTheme .cardContent span {
+  color: var(--spanGray);
+}
+
+body.darkTheme .card .projePhoto{
+    opacity: 0.7;
+}
+
+body.darkTheme .langs .html {
+  color: rgba(255, 179, 179, 0.788);
+  background-color: rgba(74, 26, 26, 0.647);
+}
+
+body.darkTheme .langs .css {
+  color: rgba(168, 197, 255, 0.945);
+  background-color: rgba(63, 73, 101, 0.314);
+}
+
+body.darkTheme .langs .js {
+  color: rgba(255, 217, 140, 0.814);
+  background-color: rgba(79, 68, 45, 0.686);
+}
+
+
+/* FOOTER */
+body.darkTheme footer {
+  background-color: rgb(20, 20, 20);
+  border-top: 2px solid rgb(40, 40, 40);
+}
+
+body.darkTheme footer .connect .icon{
+    padding: 5px 0;
+    border-radius: 10px;
+    background-color: #fff;
 }
 
 

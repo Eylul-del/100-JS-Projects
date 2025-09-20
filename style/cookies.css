@@ -42,6 +42,37 @@
     display: block;
 }
 
+/*dark mode*/
+
+/* 🌙 Dark Theme */
+body.darkTheme {
+  background-color: #121212; /* global dark background */
+  color: #e4e4e4;
+}
+
+body.darkTheme .informations {
+  background-color: #1e1e1e; /* dark card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+body.darkTheme .lastUpdate p {
+  color: #aaa; /* softer gray */
+}
+
+body.darkTheme .lastUpdate p span {
+  color: #e4e4e4; /* main text brighter */
+}
+
+body.darkTheme .informations div p {
+  color: #bbb; /* softer gray for paragraph text */
+}
+
+body.darkTheme .informations .contactUs span {
+  color: #6faaff; /* light blue highlight */
+}
+
+
+
 @media (max-width:420px) {
     .informations{
         width: 95%;

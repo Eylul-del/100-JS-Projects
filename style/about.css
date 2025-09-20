@@ -217,6 +217,103 @@ main{
     transform: scale(1.03);
 }
 
+
+
+/*dark theme*/
+
+/* Dark Theme */
+body.darkTheme {
+  background-color: #121212; /* deep dark gray */
+  color: #e4e4e4;
+}
+
+body.darkTheme a {
+  color: #a7bfff; /* softer blue for links */
+}
+
+/* HEADER */
+body.darkTheme header .headerContent {
+  background: linear-gradient(
+    to right,
+    rgba(40, 40, 80, 0.292),
+    rgba(80, 40, 80, 0.214)
+  );
+}
+
+body.darkTheme .headerContent .mainTitle p {
+  color: #cfcfcf;
+}
+
+/* ACHIEVEMENTS */
+body.darkTheme .ourAchievements {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+
+body.darkTheme .ourAchievements div p {
+  color: #aaa;
+}
+
+/* PLATFORM FEATURES */
+body.darkTheme .features .feature {
+  background-color: #1c1c1c;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+
+body.darkTheme .feature .sub p {
+  color: #aaa;
+}
+
+body.darkTheme .feature .icon i {
+  color: #fff;
+}
+
+/* READY TO START */
+body.darkTheme .readyToStart {
+  background-color: #1c1c1c;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+
+body.darkTheme .readyToStart h2 {
+  color: #e4e4e4;
+}
+
+body.darkTheme .readyToStart .sub {
+  color: #aaa;
+}
+
+body.darkTheme .readyToStart .projectBtn {
+  background: linear-gradient(
+    to right,
+    rgb(100, 100, 255),
+    rgba(140, 80, 255, 0.9),
+    rgba(180, 120, 255, 0.7)
+  );
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width:420px) {
+  body.darkTheme .ourMission {
+    background-color: transparent; /* keep flex layout dark-friendly */
+  }
+
+  body.darkTheme .ourAchievements {
+    background-color: #1e1e1e;
+  }
+
+  body.darkTheme .features .feature {
+    background-color: #1c1c1c;
+  }
+
+  body.darkTheme .readyToStart {
+    background-color: #1c1c1c;
+  }
+}
+
+
+
+
 @media (max-width:420px) {
 
     main{

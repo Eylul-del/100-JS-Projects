@@ -40,6 +40,35 @@
     color: rgb(43, 127, 255);
 }
 
+/*dark mode*/
+/* 🌙 Dark Theme */
+body.darkTheme {
+  background-color: #121212; /* overall dark background */
+  color: #e4e4e4;
+}
+
+body.darkTheme .informations {
+  background-color: #1e1e1e; /* dark card background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+body.darkTheme .lastUpdate p {
+  color: #aaaaaa; /* softer gray */
+}
+
+body.darkTheme .lastUpdate p span {
+  color: #f0f0f0; /* lighter main text */
+}
+
+body.darkTheme .informations div p {
+  color: #bbbbbb; /* neutral text */
+}
+
+body.darkTheme .informations .contactUs span {
+  color: #6faaff; /* accent blue */
+}
+
+
 @media (max-width:420px) {
     .informations{
         width: 95%;

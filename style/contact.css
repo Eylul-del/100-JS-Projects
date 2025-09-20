@@ -105,6 +105,52 @@ body{
     line-height: 21px;
 }
 
+footer .connect .icon{
+    padding: 0 !important;
+}
+
+/*dark mode*/
+body.darkTheme {
+  background-color: #121212;
+  color: #e4e4e4;
+}
+
+body.darkTheme .contactInfo .contactLinks,
+body.darkTheme .popularQuestions {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+body.darkTheme .contactLinks .email span,
+body.darkTheme .contactLinks .github span,
+body.darkTheme .contactLinks .responceTime span {
+  color: #aaa; 
+}
+
+body.darkTheme .popularQuestions p {
+  color: #aaa;
+}
+
+body.darkTheme .contactLinks .email .text p,
+body.darkTheme .contactLinks .github .text p {
+  color: #6faaff;
+}
+
+body.darkTheme .contactLinks .email .icon i {
+  background-color: rgb(43, 127, 255); 
+  color: #fff;
+}
+
+body.darkTheme .contactLinks .github .icon i {
+  background-color: rgb(0, 201, 80);
+  color: #fff;
+}
+
+body.darkTheme .responceTime .icon i {
+  background-color: rgb(152, 16, 250); 
+  color: #fff;
+}
+
 
 
 @media (max-width:420px) {

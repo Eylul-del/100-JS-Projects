@@ -194,6 +194,7 @@
     box-sizing: border-box;
     padding: 10px 15px;
     color: white;
+    font-size: 17px;
     transition: 0.3s;
     border: 1px solid rgba(255, 255, 255, 0.295);
     background-color: rgba(237, 237, 237, 0.279);
@@ -289,6 +290,125 @@
     height: 180px !important;
     width: 280px !important;
 }
+
+
+/*dark mode*/
+
+/* 🌙 Dark Theme */
+body.darkTheme {
+  background-color: #121212;
+  color: #e4e4e4;
+}
+
+body.darkTheme .mainTitle h2 {
+  background: linear-gradient(to right, #6a8bff, #447bff, #7a5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.darkTheme .mainTitle h3 {
+  color: #c0c0c0;
+}
+
+body.darkTheme .projectName .image {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  background-color: #1e1e1e;
+}
+
+body.darkTheme .projectName .image img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+body.darkTheme .projectInfo {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+body.darkTheme .projectDescription .title .icon {
+  background-color: var(--linkBlue);
+}
+
+body.darkTheme .sub {
+  color: #c9c9c9;
+}
+
+body.darkTheme .langName p:first-child {
+  border: 1px solid rgba(255, 137, 3, 0.4);
+  background-color: rgba(138, 71, 0, 0.4);
+  color: rgb(255, 180, 100);
+}
+
+body.darkTheme .langName p:nth-child(2) {
+  color: #7fb2ff;
+  background-color: rgba(40, 78, 160, 0.4);
+  border: 1px solid rgba(102, 153, 255, 0.6);
+}
+
+body.darkTheme .langName p:last-child {
+  color: #ffd65c;
+  background-color: rgba(153, 128, 0, 0.3);
+  border: 1px solid rgba(255, 215, 0, 0.6);
+}
+
+body.darkTheme .liveDemo {
+  background: linear-gradient(
+    to right bottom,
+    oklch(40% .2 149.5),
+    oklch(35% .18 149.2),
+    oklch(30% .15 150.0)
+  );
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+body.darkTheme .sourceCode {
+  background: linear-gradient(to right bottom, #0c0c20, #00002a, #00001a);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+body.darkTheme .openProject a {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgb(200, 200, 200);
+}
+
+body.darkTheme .openProject:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+body.darkTheme .showProject .sub p {
+  color: #bbbbbb;
+}
+
+body.darkTheme .similarProjects .text .sub1 {
+  background-color: oklch(61.641% 0.05764 308.581 / 0.388);
+}
+
+body.darkTheme .similarProjects .text .sub1 .emptyDot {
+  background-color: oklch(70% .2 303.724);
+}
+
+body.darkTheme .similarProjects .text .sub1 span {
+  color: oklch(80% .22 303.724);
+}
+
+body.darkTheme .similarProjects .text h2 {
+  background: linear-gradient(to right, oklch(75% .19 303.7), oklch(68% .24 301.66));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.darkTheme .similarProjects .text p {
+  color: #bdbdbd !important;
+}
+
+body.darkTheme .similarProjects .card .projePhoto{
+    box-shadow: none !important;
+}
+
+body.darkTheme .projectsCards .card .projePhoto {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
 
 @media (max-width: 420px) {
     .headerContent{

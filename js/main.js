@@ -9,11 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let termsBtns = document.querySelectorAll(".termsBtn");
 
   // detect if we are inside /projects/
-  const isInProjects = window.location.pathname.includes('/projects/');
-  const prefix = isInProjects ? '../' : './';
+    let isInProjects = window.location.pathname.includes('/projects/');
+    let prefix = isInProjects ? '../' : './';
 
-  // map variables → file paths
-  const links = [
+    let links = [
     { btns: homeBtns, file: 'index.html' },
     { btns: aboutBtns, file: 'about.html' },
     { btns: projectBtns, file: 'allProjects.html' },
@@ -145,3 +144,28 @@ window.addEventListener("scroll", () =>{
 backToTop.addEventListener("click", () =>{
   window.scrollTo({top: 0, behavior: "smooth"});
 })
+
+
+
+//dark mode
+
+let theme = document.querySelector(".themeToggle");
+
+if(localStorage.getItem("theme") === "dark"){
+  document.body.classList.add("darkTheme");
+  theme.textContent = "🌞";
+}else{
+  theme.textContent  = "🌚";
+}
+
+theme.onclick = function(){
+  document.body.classList.toggle("darkTheme");
+
+  if(document.body.classList.contains("darkTheme")){
+    localStorage.setItem("theme", "dark");
+    theme.textContent = "🌞";
+  }else{
+    localStorage.setItem("theme", "light");
+    theme.textContent  = "🌚";
+  }
+};
